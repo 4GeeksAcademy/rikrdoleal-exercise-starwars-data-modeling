@@ -33,7 +33,7 @@ class People(Base):
     id = Column(Integer, primary_key = True)
     name = Column(String(20), nullable = False, unique= True)
     gender = Column(String(10), nullable = False)
-    planet = Column(String(20), ForeignKey("Planets.id"))
+    planet_id = Column(String(20), ForeignKey("Planets.id"))
 
     def serialize (self):
         return {
